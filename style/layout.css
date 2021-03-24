@@ -1,25 +1,26 @@
 section {
-    width: 480px;
-    height: auto;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
 }
 div {
     position: relative;
-    width: 480px;
+    width: 100%;
     height: 75px;
-    padding: auto;
-    float: left;
     margin: 0 auto;
     text-align: center;
 }
 div:nth-child(2){
+
     height: 150px;
 }
 .one {
     height: 150px;
 }
 .two {
-    width: 240px;
+    width: 50%;
     height: 250px;
     margin: 0px;
 }
@@ -37,16 +38,17 @@ p {
 
 @media( min-width:768px){
     section {
-        width: 960px;
+        width: 100%;
         height: auto;
         margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
     }
     div {
         position: relative;
-        width: 960px;
+        width: 100%;
         height: 100px;
         padding: auto;
-        float: left;
         margin: 0 auto;
         text-align: center;
     }
@@ -54,16 +56,77 @@ p {
         height: 600px;
         width: 200px;
     }
+    div:nth-child(3){
+        width: calc(50% - 100px);
+    }
+    div:nth-child(4){
+        width: calc(50% - 100px);
+    }
     .one{
-        width: 380px;
+        
         height: 200px;
     }
     .two{
-        width: 190px;
+        width: calc(25% - 50px);
         height: 250px;
+        left: 200px;
+        bottom: 400px;
     }
     div:nth-child(9){
-        width: 760px;
-        height: 150px;
+        width: calc(100% - 200px);
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: 550px;
+    }
+    body {
+        overflow: hidden;
+    }
+}
+@media( min-width:960px){
+    section {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+    div {
+        position: relative;
+        width: 100%;
+        height: 100px;
+        padding: auto;
+        margin: 0 auto;
+        text-align: center;
+    }
+    div:nth-child(2){
+        height: 600px;
+        width: 200px;
+    }
+    div:nth-child(3){
+        width: calc(50% - 100px);
+    }
+    div:nth-child(4){
+        width: calc(50% - 100px);
+    }
+    .one{
+        
+        height: 200px;
+    }
+    .two{
+        width: calc(25% - 50px);
+        height: 250px;
+        left: 200px;
+        bottom: 400px;
+    }
+    div:nth-child(9){
+        width: calc(100% - 200px);
+    height: 150px;
+    position: absolute;
+    right: 0;
+    top: 550px;
+    }
+    body {
+        overflow: hidden;
     }
 }
